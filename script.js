@@ -17,8 +17,16 @@ function createBG() {
 function createSnake() {
     for(i = 0; i < snake.length; i++) {
         context.fillStyle = "green";
-        context.fillRect(snake[i].x, snake[i].y, box, box)
+        context.fillRect(snake[i].x, snake[i].y, box, box);
     }
+}
+
+document.addEventListener('keydown', update)
+
+function update(event) {
+    if(event.keyCode == 37 && direction != "right") direct = "left";
+    if(event.keyCode == 38 && direction != "down") direct = "up";
+    if(event.keyCode == 39 && direction != "left") direct = "right";
 }
 
 function gameStart() {
@@ -28,10 +36,10 @@ function gameStart() {
     let snakeX = snake[0].x
     let snakeY = snake[0].y
 
-    if(direction == "right") snakeX += box
-    if(direction == "left") snakeX -= box
-    if(direction == "up") snakeY -= box
-    if(direction == "down") snakeY += box
+    if(direction == "right") snakeX += box;
+    if(direction == "left") snakeX -= box;
+    if(direction == "up") snakeY -= box;
+    if(direction == "down") snakeY += box;
 
     snake.pop()
 
