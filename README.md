@@ -45,7 +45,7 @@ ctx.drawImage(imageName, X , Y  , Width, Height);
 
 ctx.drawImage(       img      , 40, 50,    25   ,    25    );
 
-![img/canvas.png](img/canvas1.png)
+![img/canvas2.png](img/canvas1.png)
 
 ### Draw Rectangle
 
@@ -57,7 +57,7 @@ ctx.fillRect (100, 300,    30 ,           30 );
 
                      X  ,   Y ,   Width ,   Height
 
-![img/canvas%202.png](img/canvas3.png)
+![img/canvas3.png](img/canvas3.png)
 
 px
 
@@ -77,13 +77,12 @@ snake[0] = {x : 9 * box, y : 10 * box};//posição inicial da Snake
 
 snake[1] = {x : 8 * box, y : 10 * box};// posição 2 da Snake
 
-let food = {
 
 let food = {
 
-x : Math.floor(Math.random() * 17 + 1) * box //Math.floor - retorna o menor número inteiro dentre o número "x"; Math.random - retorna um número pseudo-aleatório no intervalo
+    x : Math.floor(Math.random() * 17 + 1) * box //Math.floor - retorna o menor número inteiro dentre o número "x"; Math.random - retorna um número pseudo-aleatório no intervalo
 
-y : Math.floor(Math.random() * 15 + 3) * box};
+    y : Math.floor(Math.random() * 15 + 3) * box};
 
 }
 
@@ -95,13 +94,13 @@ ctx.drawImage(ground, 0, 0);
 
 for(let i = 0; i < snake.legth; i++){//ler a Snake inteira
 
-ctx.fillStyle = (i == 0)? "green" : "white";//preencher a box com a Snake (no início i == 0) com a cor
+    ctx.fillStyle = (i == 0)? "green" : "white";//preencher a box com a Snake (no início i == 0) com a cor
 
-ctx.fillRect(snake[i].x, snake[i].y, box, box);//posição da Snake 
+    ctx.fillRect(snake[i].x, snake[i].y, box, box);//posição da Snake 
 
-ctx.strokeStyle = "red"; //cor da borda da Snake
+    ctx.strokeStyle = "red"; //cor da borda da Snake
 
-ctx.strokeRect(snake[i].x, snake[i].y, box, box);//posição da borda da Snake
+    ctx.strokeRect(snake[i].x, snake[i].y, box, box);//posição da borda da Snake
 
 }
 
@@ -133,23 +132,22 @@ function direction(event) {//verifica qual tecla foi apertada
 
 if(event.keycode == 37 && d != "RIGHT"){//se apertar a tecla 37(esquerda), para que a Snake não possa voltar pela parte de trás, colocamos a condição.
 
-d = "LEFT";
+    d = "LEFT";
 
 }else if(event.keycode == 38 && d != "DOWN"){
 
-d = "UP";
+    d = "UP";
 
-}else if(event.keycode == 39 && d != "LEFT"){
+    }else if(event.keycode == 39 && d != "LEFT"){
 
-d = "RIGHT";
+    d = "RIGHT";
 
 }else if(event.keycode == 39 && d != "UP"){
 
-d = "DOWN";
+    d = "DOWN";
 
 }
 
-}
 
 ## How Snake Moves
 
@@ -181,9 +179,9 @@ snakeY += box;
 
 let newHead = {
 
-x: snakeX,
+    x: snakeX,
 
-y: snakeY
+    y: snakeY
 
 }
 
@@ -194,16 +192,14 @@ snake.unshift(newHead);
 # When Snake eats food
 
 if(snakeX == food.x && snakeY == food.y){ //se a cabeça da Snake estiver no mesmo lugar que a comida...
+    //adicionamos outra cabeça sem snake.pop()
+    score++;
 
-score++;
+    food = {
 
-food = {
+    x: unit * Math.floor(Math.random() * 17 + 1),
 
-x: unit * Math.floor(Math.random() * 17 + 1),
-
-y: unit * Math.floor(Math.random() * 15 + 3),
-
-}//adicionamos outra cabeça sem snake.pop()
+    y: unit * Math.floor(Math.random() * 15 + 3),
 
 }else{
 
@@ -217,18 +213,14 @@ y: unit * Math.floor(Math.random() * 15 + 3),
 
 function collision(newHead, snake) {
 
-for(let i = 0; i < snake.lenght; i++){ //percorre a Snake
+    for(let i = 0; i < snake.lenght; i++){ //percorre a Snake
 
-if(newHead.x == snake[i].x && newHead.y == snake[i].y){ // caso haja colisão
+        if(newHead.x == snake[i].x && newHead.y == snake[i].y){ // caso haja colisão
 
-return true;
-
-}
-
-}
-
-return false;
-
+            return true;
+        }
+    }
+    return false;
 }
 
 ![img/gameOver.png](img/gameOver.png)
