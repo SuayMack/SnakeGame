@@ -81,7 +81,7 @@ let food = {
 
 let food = {
 
-x : Math.floor(Math.random() * 17 + 1) * box [//Math.floor](//math.floor) - retorna o menor número inteiro dentre o número "x"; Math.random - retorna um número pseudo-aleatório no intervalo
+x : Math.floor(Math.random() * 17 + 1) * box //Math.floor - retorna o menor número inteiro dentre o número "x"; Math.random - retorna um número pseudo-aleatório no intervalo
 
 y : Math.floor(Math.random() * 15 + 3) * box};
 
@@ -99,7 +99,7 @@ ctx.fillStyle = (i == 0)? "green" : "white";//preencher a box com a Snake (no in
 
 ctx.fillRect(snake[i].x, snake[i].y, box, box);//posição da Snake 
 
-ctx.strokeStyle = "red"; [//cor](//cor) da borda da Snake
+ctx.strokeStyle = "red"; //cor da borda da Snake
 
 ctx.strokeRect(snake[i].x, snake[i].y, box, box);//posição da borda da Snake
 
@@ -127,7 +127,7 @@ let game = setInterval(draw, 100);
 
 let d;
 
-document.addEventListener("keydown", direction); [//ao ouvir](//ouvir) o evento keydown, startar a função direction.
+document.addEventListener("keydown", direction); //ao ouvir o evento keydown, startar a função direction.
 
 function direction(event) {//verifica qual tecla foi apertada
 
@@ -165,9 +165,9 @@ snake.pop();
 
 ### Old head position
 
-snakeX = snake[0] . x; [//Old](//old) head Position
+snakeX = snake[0] . x; //Old head Position
 
-snake.Y = snake[0] . y;// Old head Position
+snake.Y = snake[0] . y; //Old head Position
 
 ### One of the directions
 
@@ -193,7 +193,7 @@ snake.unshift(newHead);
 
 # When Snake eats food
 
-if(snakeX == food.x && snakeY == food.y){ [//](//a)se a cabeça da Snake estiver no mesmo lugar que a comida...
+if(snakeX == food.x && snakeY == food.y){ //se a cabeça da Snake estiver no mesmo lugar que a comida...
 
 score++;
 
@@ -211,13 +211,13 @@ y: unit * Math.floor(Math.random() * 15 + 3),
 
 # GAME OVER
 
-[//](//quando)quando a Snake sofre uma colisão
+//quando a Snake sofre uma colisão
 
-[//vamos](//vamos) observar se a cabeça da Sanke sofre alguma colisão com qualquer parte da Snake.
+//vamos observar se a cabeça da Sanke sofre alguma colisão com qualquer parte da Snake.
 
 function collision(newHead, snake) {
 
-for(let i = 0; i < snake.lenght; i++){ [//percorre](//percorre) a Snake
+for(let i = 0; i < snake.lenght; i++){ //percorre a Snake
 
 if(newHead.x == snake[i].x && newHead.y == snake[i].y){ // caso haja colisão
 
