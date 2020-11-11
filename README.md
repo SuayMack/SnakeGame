@@ -200,7 +200,6 @@ if(snakeX == food.x && snakeY == food.y){ //se a cabeça da Snake estiver no mes
     x: unit * Math.floor(Math.random() * 17 + 1),
 
     y: unit * Math.floor(Math.random() * 15 + 3),
-
 }else{
 
 }
