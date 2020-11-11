@@ -19,7 +19,7 @@ Atividade: Recriando o jogo da cobrinha com JavaScript
 
 </canvas>
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/canvas.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/canvas.png)
+![img/canvas1.png](img/canvas1.png)
 
 # JS
 
@@ -43,9 +43,9 @@ audioName.play();
 
 ctx.drawImage(imageName, X , Y  , Width, Height);
 
-ctx.drawImage(       img      , 40, 50,    25   ,    25    )
+ctx.drawImage(       img      , 40, 50,    25   ,    25    );
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/canvas%201.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/canvas%201.png)
+![img/canvas.png](img/canvas1.png)
 
 ### Draw Rectangle
 
@@ -57,7 +57,7 @@ ctx.fillRect (100, 300,    30 ,           30 );
 
                      X  ,   Y ,   Width ,   Height
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/canvas%202.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/canvas%202.png)
+![img/canvas%202.png](img/canvas3.png)
 
 px
 
@@ -67,7 +67,7 @@ ctx.fillStyle = "black"
 
 ctx.fillRect(5*box, 6*box, 2*box, 3*box);
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/bg.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/bg.png)
+![img/bg.png](img/bg.png)
 
 # Snake && ground && food && score
 
@@ -123,7 +123,7 @@ let game = setInterval(draw, 100);
 
  
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/teclado.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/teclado.png)
+![img/teclado.png](img/teclado.png)
 
 let d;
 
@@ -189,7 +189,7 @@ y: snakeY
 
 snake.unshift(newHead);
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/SnakeMoves.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/SnakeMoves.png)
+![img/SnakeMoves.png](img/SnakeMoves.png)
 
 # When Snake eats food
 
@@ -231,13 +231,13 @@ return false;
 
 }
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/gameOver.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/gameOver.png)
+![img/gameOver.png](img/gameOver.png)
 
 ---
 
 snake < box || snake < 3 * box
 
-![Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/gameOver2.png](Code%20the%20Snake%20Game%20f4db709e736c431b8f0f4adcc54d9af9/gameOver2.png)
+![img/gameOver2.png](img/gameOver2.png)
 
 # Citações
 
