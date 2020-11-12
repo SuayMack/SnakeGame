@@ -10,8 +10,8 @@ Atividade: Recriando o jogo da cobrinha com JavaScript
 - CSS
 - JavaScript
 - Visual Studio Code
-- Notion
-- Whimsical
+- Notion (documentation)
+- Whimsical (documentation)
 
 # HTML5
 
