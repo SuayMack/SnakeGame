@@ -10,8 +10,8 @@ Atividade: Recriando o jogo da cobrinha com JavaScript
 - CSS
 - JavaScript
 - Visual Studio Code
-- Notion
-- Whimsical
+- Notion (documentation)
+- Whimsical (documentation)
 
 # HTML5
 
@@ -19,7 +19,7 @@ Atividade: Recriando o jogo da cobrinha com JavaScript
 
 </canvas>
 
-![img/canvas1.png](img/canvas1.png)
+![resources/img/canvas1.png](resources/img/canvas1.png)
 
 # JS
 
@@ -45,7 +45,7 @@ ctx.drawImage(imageName, X , Y  , Width, Height);
 
 ctx.drawImage(       img      , 40, 50,    25   ,    25    );
 
-![img/canvas2.png](img/canvas1.png)
+![resources/img/canvas2.png](resources/img/canvas1.png)
 
 ### Draw Rectangle
 
@@ -57,7 +57,7 @@ ctx.fillRect (100, 300,    30 ,           30 );
 
                      X  ,   Y ,   Width ,   Height
 
-![img/canvas3.png](img/canvas3.png)
+![resources/img/canvas3.png](resources/img/canvas3.png)
 
 px
 
@@ -67,7 +67,7 @@ ctx.fillStyle = "black"
 
 ctx.fillRect(5*box, 6*box, 2*box, 3*box);
 
-![img/bg.png](img/bg.png)
+![resources/img/bg.png](resources/img/bg.png)
 
 # Snake && ground && food && score
 
@@ -122,7 +122,7 @@ let game = setInterval(draw, 100);
 
  
 
-![img/teclado.png](img/teclado.png)
+![resources/img/teclado.png](resources/img/teclado.png)
 
 let d;
 
@@ -187,7 +187,7 @@ let newHead = {
 
 snake.unshift(newHead);
 
-![img/SnakeMoves.png](img/SnakeMoves.png)
+![resources/img/SnakeMoves.png](resources/img/SnakeMoves.png)
 
 # When Snake eats food
 
@@ -222,13 +222,13 @@ function collision(newHead, snake) {
     return false;
 }
 
-![img/gameOver.png](img/gameOver.png)
+![resources/img/gameOver.png](resources/img/gameOver.png)
 
 ---
 
 snake < box || snake < 3 * box
 
-![img/gameOver2.png](img/gameOver2.png)
+![resources/img/gameOver2.png](resources/img/gameOver2.png)
 
 # Citações
 
